@@ -1,8 +1,0 @@
-{
-  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
-  "version": 2,
-  "projects": {
-    "kargoru-app": "apps/kargoru-app",
-    "kargoru-app-e2e": "apps/kargoru-app-e2e"
-  }
-}
