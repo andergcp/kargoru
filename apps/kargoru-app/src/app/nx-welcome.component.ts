@@ -433,7 +433,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome kargoru-app 👋
+            Welcome kargoru-app Ander is here 👋
           </h1>
         </div>
 
