@@ -5,9 +5,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/kargoru-app",
         "index": "apps/kargoru-app/src/index.html",
@@ -67,7 +65,10 @@
           "browserTarget": "kargoru-app:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/kargoru-app/proxy.conf.json"
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -86,9 +87,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/kargoru-app"
-      ],
+      "outputs": ["coverage/apps/kargoru-app"],
       "options": {
         "jestConfig": "apps/kargoru-app/jest.config.ts",
         "passWithNoTests": true
