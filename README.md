@@ -25,6 +25,7 @@ Project in progress ...
 ## Other tools used:
 * Github actions for Ci
 * Mongo community 6.0
+* Mongoose
 * Angular Material
 
 ## Project planing
