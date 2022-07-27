@@ -1,5 +1,8 @@
+import * as mongoose from 'mongoose';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Date, Number } from 'mongoose';
+
+import { Client } from '../../client/schema/client.schema';
 
 export type QuoteRequestDocument = QuoteRequest & Document;
 
@@ -20,20 +23,14 @@ export class QuoteRequest {
   @Prop({ required: true, default: Date.now})
   dateCreated: Date;
 
-  @Prop({ required: true})
-  clientId: Number;
+  @Prop({ required: true, type: mongoose.Schema.Types.ObjectId, ref: 'Client'})
+  clientId: Client;
 
   @Prop({ required: true})
   portFrom: String;
 
   @Prop({ required: true})
   portTo: String;
-
-  @Prop({ required: true})
-  age: Number;
-
-  @Prop({ required: true})
-  breed: String;
 }
 
 export const QuoteRequestSchema = SchemaFactory.createForClass(QuoteRequest);

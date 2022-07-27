@@ -1,4 +1,4 @@
-export interface QuoteRequest {
+export interface IQuoteRequest {
   id: number;
   clientId: number;
   portFrom: string;
@@ -10,7 +10,7 @@ export interface QuoteRequest {
   dateCreated: number;
 }
 
-export interface QuoteResponse {
+export interface IQuoteResponse {
   id: number;
   requestId: number;
   supplierId: number;
@@ -19,15 +19,13 @@ export interface QuoteResponse {
   additionalValues: {string:number}[];
 }
 
-export interface Client {
-  id: number;
+export interface IClient {
   name: string;
   email: string;
   pwd: string;
 }
 
-export interface Supplier {
-  id: number;
+export interface ISupplier {
   name: string;
   email: string;
   pwd: string;
