@@ -7,7 +7,7 @@ import { ConfigModule } from './config/config.module';
 import { ConfigService } from './config/config.service';
 import { QuoteRequestModule } from './quote-request/quote-request.module';
 import { QuoteResponseModule } from './quote-response/quote-response.module';
-import { ClientModule } from './client/client.module';
+import { ClientsModule } from './client/client.module';
 import { SupplierModule } from './supplier/supplier.module';
 
 @Module({
@@ -20,7 +20,7 @@ import { SupplierModule } from './supplier/supplier.module';
     }),
     QuoteRequestModule,
     QuoteResponseModule,
-    ClientModule,
+    ClientsModule,
     SupplierModule,
   ],
   controllers: [AppController],
