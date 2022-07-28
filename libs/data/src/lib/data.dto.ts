@@ -1,5 +1,4 @@
 export interface IQuoteRequest {
-  id: number;
   clientId: number;
   portFrom: string;
   portTo: string;
@@ -11,12 +10,11 @@ export interface IQuoteRequest {
 }
 
 export interface IQuoteResponse {
-  id: number;
-  requestId: number;
+  quoteRequestId: number;
   supplierId: number;
   dateCreated: number;
   basicPrice: number;
-  additionalValues: {string:number}[];
+  additionalValues: Map<string,number>;
 }
 
 export interface IClient {
