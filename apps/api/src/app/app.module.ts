@@ -5,10 +5,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from './config/config.module';
 import { ConfigService } from './config/config.service';
-import { QuoteRequestModule } from './quote-request/quote-request.module';
-import { QuoteResponseModule } from './quote-response/quote-response.module';
+import { QuoteRequestsModule } from './quote-request/quote-request.module';
+import { QuoteResponsesModule } from './quote-response/quote-response.module';
 import { ClientsModule } from './client/client.module';
-import { SupplierModule } from './supplier/supplier.module';
+import { SuppliersModule } from './supplier/supplier.module';
 
 @Module({
   imports: [
@@ -18,10 +18,10 @@ import { SupplierModule } from './supplier/supplier.module';
         inject: [ConfigService],
         useFactory: async (configService: ConfigService) => configService.getMongoConfig(),
     }),
-    QuoteRequestModule,
-    QuoteResponseModule,
+    QuoteRequestsModule,
+    QuoteResponsesModule,
     ClientsModule,
-    SupplierModule,
+    SuppliersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

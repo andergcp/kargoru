@@ -20,7 +20,7 @@ export class QuoteRequest {
   @Prop({ required: true})
   insurance: Boolean;
 
-  @Prop({ required: true, default: Date.now})
+  @Prop({ required: false, default: Date.now})
   dateCreated: Date;
 
   @Prop({ required: true, type: mongoose.Schema.Types.ObjectId, ref: 'Client'})
